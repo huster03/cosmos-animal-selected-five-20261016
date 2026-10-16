@@ -1,6 +1,6 @@
 {
-  "title": "Cosmos · 动物道路场景精选",
-  "selection": "User-selected examples; not a representative benchmark",
+  "title": "Cosmos · 生成与控制对照",
+  "selection": "User-selected qualitative examples, not a representative benchmark",
   "inference": {
     "views": 6,
     "per_view_height": 480,
@@ -11,6 +11,27 @@
     "sampling_steps": 50,
     "first_rgb_frames": 0
   },
+  "groups": [
+    {
+      "id": "selected-examples",
+      "title": "从40个推理结果中筛选出效果稍好的例子",
+      "case_ids": [
+        "animal8_horse_01",
+        "animal8_deer_01",
+        "animal8_dog_02",
+        "animal8_near_giraffe_02"
+      ]
+    },
+    {
+      "id": "alignment-examples",
+      "title": "由于单视角和多视角混合训练导致无法仅通过文本正确与bbox对齐，模型倾向于各个视角生成。",
+      "case_ids": [
+        "animal8_elephant_01",
+        "animal8_horse_03",
+        "animal8_near_horse_01"
+      ]
+    }
+  ],
   "samples": [
     {
       "case_id": "animal8_horse_01",
@@ -27,36 +48,9 @@
         "CAM_B0",
         "CAM_R2"
       ],
-      "generated": "videos/4000-animal8_horse_01-generated.mp4",
-      "generated_sha256": "f9c1d2c76153e97d2ba7ade3f92863c05d426c86b51303cc8ecc87e4ea08ee60",
-      "control": "videos/4000-animal8_horse_01-control.mp4",
-      "control_sha256": "b18f9d76cad6e52f027ab62f84e5c3db2533b813ef9fff12d6ac4d11ade4c60a",
       "video": "videos/4000-animal8_horse_01-video.mp4",
       "comparison_sha256": "029c0eaa13b681502892602c581585a61cd59d61ea819b71e125475c8f39cbe1",
-      "poster": "posters/4000-animal8_horse_01.jpg"
-    },
-    {
-      "case_id": "animal8_horse_03",
-      "title": "马 · 场景3",
-      "checkpoint_step": 4000,
-      "weights": "EMA",
-      "seed": 14,
-      "prompt": "The video shows a realistic front-facing autonomous driving scene on a broad urban road in daylight. The ego vehicle proceeds forward through a lightly populated road environment with marked lanes, curbs, and normal traffic visible around the roadway. An adult horse appears from the right side at a distant position and walks across the road toward the left. The horse moves more slowly than a running animal, maintains a natural upright body posture, and crosses in world-consistent motion without being carried sideways by the ego vehicle.",
-      "columns": [
-        "CAM_L0",
-        "CAM_F0",
-        "CAM_R0",
-        "CAM_L2",
-        "CAM_B0",
-        "CAM_R2"
-      ],
-      "generated": "videos/4000-animal8_horse_03-generated.mp4",
-      "generated_sha256": "f6593e40fc85537bb626fda6e5b6076a87b7b16c37399b553835f10b09699292",
-      "control": "videos/4000-animal8_horse_03-control.mp4",
-      "control_sha256": "836baf91a45c149707017b617465d62ce2ea906d96b2824435b82a401c52d82c",
-      "video": "videos/4000-animal8_horse_03-video.mp4",
-      "comparison_sha256": "96854da91b3747177517ed14ee5a451bc427c2f2a09c2ca04fa9c326633181cf",
-      "poster": "posters/4000-animal8_horse_03.jpg"
+      "group": "selected-examples"
     },
     {
       "case_id": "animal8_deer_01",
@@ -73,36 +67,9 @@
         "CAM_B0",
         "CAM_R2"
       ],
-      "generated": "videos/4000-animal8_deer_01-generated.mp4",
-      "generated_sha256": "6474a2429462de78ebc0382b9d80c9e2634f9cd7735df01b9c5c6e3d2801657a",
-      "control": "videos/4000-animal8_deer_01-control.mp4",
-      "control_sha256": "c8938ff2b223a1484966bccc72620880a16ba833c0ed77ac69ece0d6cd60bf7d",
       "video": "videos/4000-animal8_deer_01-video.mp4",
       "comparison_sha256": "ed4bc439258e1bd7e8b961e2a5f9c5670f9542620ce6fe803c500067d7ba3b14",
-      "poster": "posters/4000-animal8_deer_01.jpg"
-    },
-    {
-      "case_id": "animal8_elephant_01",
-      "title": "大象 · 场景1",
-      "checkpoint_step": 4000,
-      "weights": "EMA",
-      "seed": 18,
-      "prompt": "The video shows a realistic front-facing autonomous driving scene on a quiet urban roadway in daylight. The ego vehicle is stationary or moving only slightly, with visible lane markings, road boundaries, and sparse normal traffic in the surrounding environment. A large elephant enters the road from the right side at a controlled distance and walks steadily across toward the left side. Its slow, heavy movement forms an unusual but physically plausible animal-crossing hazard while the roadway and camera viewpoint remain stable.",
-      "columns": [
-        "CAM_L0",
-        "CAM_F0",
-        "CAM_R0",
-        "CAM_L2",
-        "CAM_B0",
-        "CAM_R2"
-      ],
-      "generated": "videos/4000-animal8_elephant_01-generated.mp4",
-      "generated_sha256": "4eecff45fb0179892990434f3380dd335af09b5a7df956edb8bb228c7d99c1dd",
-      "control": "videos/4000-animal8_elephant_01-control.mp4",
-      "control_sha256": "ac427820295ddce3a243ea9c7b1df6287a5b5d153750d7a5d4f5150cc8ab4277",
-      "video": "videos/4000-animal8_elephant_01-video.mp4",
-      "comparison_sha256": "8261050a7bec9b68f7d5a8962309ff4933c63664029d6f03416604af7adfc218",
-      "poster": "posters/4000-animal8_elephant_01.jpg"
+      "group": "selected-examples"
     },
     {
       "case_id": "animal8_dog_02",
@@ -119,13 +86,9 @@
         "CAM_B0",
         "CAM_R2"
       ],
-      "generated": "videos/2000-animal8_dog_02-generated.mp4",
-      "generated_sha256": "505d70d7bc203f0caad656184e21f3676f25797973caee77194e94ea7c5df356",
-      "control": "videos/2000-animal8_dog_02-control.mp4",
-      "control_sha256": "c725bb0f58d0cf7fd9a461c7d5163c3032cf51f4a58f1df40ebedf3dbe8ec8e7",
       "video": "videos/2000-animal8_dog_02-video.mp4",
       "comparison_sha256": "f5911491a00c66579d0176aa2a9266149cc3d4f8146f5d1828c2abc7b3554342",
-      "poster": "posters/2000-animal8_dog_02.jpg"
+      "group": "selected-examples"
     },
     {
       "case_id": "animal8_near_giraffe_02",
@@ -142,14 +105,48 @@
         "CAM_B0",
         "CAM_R2"
       ],
-      "evaluation_group": "nearfield_20261016",
-      "generated": "videos/4000-animal8_near_giraffe_02-generated.mp4",
-      "generated_sha256": "58f106c55098f625cff245f3d52b41d38a9fc0a2cbbe0164b1514396dda1acc9",
-      "control": "videos/4000-animal8_near_giraffe_02-control.mp4",
-      "control_sha256": "edb0742a6793a58f99370e3f5817e22946cefd503e295413e6df2d01e23fc3c1",
       "video": "videos/4000-animal8_near_giraffe_02-video.mp4",
       "comparison_sha256": "4a33c27bce0de9de8d4259c78a55772e648353faf48273f715c38e39b952d0b6",
-      "poster": "posters/4000-animal8_near_giraffe_02.jpg"
+      "group": "selected-examples",
+      "evaluation_group": "nearfield_20261016"
+    },
+    {
+      "case_id": "animal8_elephant_01",
+      "title": "大象 · 场景1",
+      "checkpoint_step": 4000,
+      "weights": "EMA",
+      "seed": 18,
+      "prompt": "The video shows a realistic front-facing autonomous driving scene on a quiet urban roadway in daylight. The ego vehicle is stationary or moving only slightly, with visible lane markings, road boundaries, and sparse normal traffic in the surrounding environment. A large elephant enters the road from the right side at a controlled distance and walks steadily across toward the left side. Its slow, heavy movement forms an unusual but physically plausible animal-crossing hazard while the roadway and camera viewpoint remain stable.",
+      "columns": [
+        "CAM_L0",
+        "CAM_F0",
+        "CAM_R0",
+        "CAM_L2",
+        "CAM_B0",
+        "CAM_R2"
+      ],
+      "video": "videos/4000-animal8_elephant_01-video.mp4",
+      "comparison_sha256": "8261050a7bec9b68f7d5a8962309ff4933c63664029d6f03416604af7adfc218",
+      "group": "alignment-examples"
+    },
+    {
+      "case_id": "animal8_horse_03",
+      "title": "马 · 场景3",
+      "checkpoint_step": 4000,
+      "weights": "EMA",
+      "seed": 14,
+      "prompt": "The video shows a realistic front-facing autonomous driving scene on a broad urban road in daylight. The ego vehicle proceeds forward through a lightly populated road environment with marked lanes, curbs, and normal traffic visible around the roadway. An adult horse appears from the right side at a distant position and walks across the road toward the left. The horse moves more slowly than a running animal, maintains a natural upright body posture, and crosses in world-consistent motion without being carried sideways by the ego vehicle.",
+      "columns": [
+        "CAM_L0",
+        "CAM_F0",
+        "CAM_R0",
+        "CAM_L2",
+        "CAM_B0",
+        "CAM_R2"
+      ],
+      "video": "videos/4000-animal8_horse_03-video.mp4",
+      "comparison_sha256": "96854da91b3747177517ed14ee5a451bc427c2f2a09c2ca04fa9c326633181cf",
+      "group": "alignment-examples"
     },
     {
       "case_id": "animal8_near_horse_01",
@@ -166,15 +163,10 @@
         "CAM_B0",
         "CAM_R2"
       ],
-      "evaluation_group": "nearfield_20261016",
-      "generated": "videos/4000-animal8_near_horse_01-generated.mp4",
-      "generated_sha256": "f199e351837fbdc6104dd824c0c518d6e0bb3488c2965ceeec49d7b8cfe9eea9",
-      "control": "videos/4000-animal8_near_horse_01-control.mp4",
-      "control_sha256": "ffcbfdb04b39fe18409290658e664a714c2e5fda25a78bb6e4c1b38734fa8761",
       "video": "videos/4000-animal8_near_horse_01-video.mp4",
       "comparison_sha256": "cafa4a2107e17de612124202ba93393436bac60030047c28d1e0c02993e59e94",
-      "poster": "posters/4000-animal8_near_horse_01.jpg"
+      "group": "alignment-examples",
+      "evaluation_group": "nearfield_20261016"
     }
-  ],
-  "updated_utc": "2026-10-16T07:25:22.854928+00:00"
+  ]
 }
