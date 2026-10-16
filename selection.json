@@ -88,7 +88,22 @@
       ],
       "video": "videos/2000-animal8_dog_02-video.mp4",
       "comparison_sha256": "f5911491a00c66579d0176aa2a9266149cc3d4f8146f5d1828c2abc7b3554342",
-      "group": "selected-examples"
+      "group": "selected-examples",
+      "playback_video": "videos/2000-animal8_dog_02-comparison-compatible-v1.mp4",
+      "comparison_poster": "posters/2000-animal8_dog_02-comparison-v1.jpg",
+      "playback_sha256": "ef66519700494b5b76c211e8e196824d8c16e1b017d91d7859097bbb98dfc62d",
+      "playback_format": {
+        "width": 1872,
+        "height": 360,
+        "codec": "h264",
+        "profile": "Constrained Baseline",
+        "level": "4.0",
+        "pix_fmt": "yuv420p",
+        "frames": 29,
+        "fps": 10,
+        "full_decode": true,
+        "fast_start": true
+      }
     },
     {
       "case_id": "animal8_near_giraffe_02",
