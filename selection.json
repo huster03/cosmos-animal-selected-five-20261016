@@ -126,6 +126,55 @@
       "video": "videos/2000-animal8_dog_02-video.mp4",
       "comparison_sha256": "f5911491a00c66579d0176aa2a9266149cc3d4f8146f5d1828c2abc7b3554342",
       "poster": "posters/2000-animal8_dog_02.jpg"
+    },
+    {
+      "case_id": "animal8_near_giraffe_02",
+      "title": "长颈鹿 · 近距离场景2",
+      "checkpoint_step": 4000,
+      "weights": "EMA",
+      "seed": 22,
+      "prompt": "The video shows a realistic front-facing autonomous driving scene on a tree-lined urban intersection with traffic lights and lane markings in daylight. The ego vehicle is stopped or creeping very slowly. Exactly one tall giraffe is already clearly visible close ahead at the beginning and walks steadily from the left toward the right across the near foreground. The animal remains fully visible in the front view throughout the clip, with a recognizable natural body, steady body size, grounded feet, and continuous motion. It stays separate from the ego vehicle and surrounding traffic. The other camera views show their corresponding road surroundings; the same animal appears in another view only if it enters that camera's field of view.",
+      "columns": [
+        "CAM_L0",
+        "CAM_F0",
+        "CAM_R0",
+        "CAM_L2",
+        "CAM_B0",
+        "CAM_R2"
+      ],
+      "evaluation_group": "nearfield_20261016",
+      "generated": "videos/4000-animal8_near_giraffe_02-generated.mp4",
+      "generated_sha256": "58f106c55098f625cff245f3d52b41d38a9fc0a2cbbe0164b1514396dda1acc9",
+      "control": "videos/4000-animal8_near_giraffe_02-control.mp4",
+      "control_sha256": "edb0742a6793a58f99370e3f5817e22946cefd503e295413e6df2d01e23fc3c1",
+      "video": "videos/4000-animal8_near_giraffe_02-video.mp4",
+      "comparison_sha256": "4a33c27bce0de9de8d4259c78a55772e648353faf48273f715c38e39b952d0b6",
+      "poster": "posters/4000-animal8_near_giraffe_02.jpg"
+    },
+    {
+      "case_id": "animal8_near_horse_01",
+      "title": "马 · 近距离场景1",
+      "checkpoint_step": 4000,
+      "weights": "EMA",
+      "seed": 12,
+      "prompt": "The video shows a realistic front-facing autonomous driving scene on a quiet urban street lined with buildings and parked vehicles in daylight. The ego vehicle is stopped or creeping very slowly. Exactly one adult horse is already clearly visible close ahead at the beginning and walks steadily from the right toward the left across the near foreground. The animal remains fully visible in the front view throughout the clip, with a recognizable natural body, steady body size, grounded feet, and continuous motion. It stays separate from the ego vehicle and surrounding traffic. The other camera views show their corresponding road surroundings; the same animal appears in another view only if it enters that camera's field of view.",
+      "columns": [
+        "CAM_L0",
+        "CAM_F0",
+        "CAM_R0",
+        "CAM_L2",
+        "CAM_B0",
+        "CAM_R2"
+      ],
+      "evaluation_group": "nearfield_20261016",
+      "generated": "videos/4000-animal8_near_horse_01-generated.mp4",
+      "generated_sha256": "f199e351837fbdc6104dd824c0c518d6e0bb3488c2965ceeec49d7b8cfe9eea9",
+      "control": "videos/4000-animal8_near_horse_01-control.mp4",
+      "control_sha256": "ffcbfdb04b39fe18409290658e664a714c2e5fda25a78bb6e4c1b38734fa8761",
+      "video": "videos/4000-animal8_near_horse_01-video.mp4",
+      "comparison_sha256": "cafa4a2107e17de612124202ba93393436bac60030047c28d1e0c02993e59e94",
+      "poster": "posters/4000-animal8_near_horse_01.jpg"
     }
-  ]
+  ],
+  "updated_utc": "2026-10-16T07:25:22.854928+00:00"
 }
